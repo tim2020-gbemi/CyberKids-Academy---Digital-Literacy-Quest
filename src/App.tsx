@@ -48,10 +48,14 @@ export default function App() {
   const [isAudioSettingsOpen, setIsAudioSettingsOpen] = useState(false);
   const [autoRead, setAutoRead] = useState(true);
 
-  // Sync profile to localStorage
+  // Sync profile to localStorage safely
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('cyberkids_profile', JSON.stringify(profile));
+      try {
+        localStorage.setItem('cyberkids_profile', JSON.stringify(profile));
+      } catch (err) {
+        console.warn('Storage disabled or unavailable', err);
+      }
     }
   }, [profile]);
 
