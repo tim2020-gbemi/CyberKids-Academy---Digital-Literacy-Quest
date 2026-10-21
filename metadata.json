@@ -1,0 +1,6 @@
+{
+  "name": "CyberKids Academy - Digital Literacy Quest",
+  "description": "An interactive, voice-narrated digital literacy game for kids ages 5-12 to master internet safety, strong passwords, scam detection, cyber kindness, and smart screen habits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
