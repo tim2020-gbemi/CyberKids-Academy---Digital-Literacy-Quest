@@ -3,6 +3,7 @@ import { Volume2, VolumeX, Award, Star } from 'lucide-react';
 import { UserProfile } from '../types/game';
 import { AVATARS } from '../data/gameContent';
 import { sfx } from '../services/audioEngine';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface TopNavProps {
   currentTab: string;
@@ -99,6 +100,9 @@ export const TopNav: React.FC<TopNavProps> = ({
 
         {/* Zone 3: 1 primary action & kid profile control */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {/* PWA In-App Install Prompt */}
+          <PWAInstallButton />
+
           {/* Quick Voice Settings Trigger */}
           <button
             onClick={() => {

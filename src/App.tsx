@@ -15,6 +15,7 @@ import { HardwareInsideGame } from './components/games/HardwareInsideGame';
 import { CertificateModal } from './components/CertificateModal';
 import { ProfileModal } from './components/ProfileModal';
 import { AudioControlsBar } from './components/AudioControlsBar';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { UserProfile, AgeGroup } from './types/game';
 import { voice, sfx } from './services/audioEngine';
 import { ArrowLeft, Volume2, Shield } from 'lucide-react';
@@ -279,6 +280,9 @@ export default function App() {
           <AudioControlsBar onClose={() => setIsAudioSettingsOpen(false)} />
         </div>
       )}
+
+      {/* Offline Connectivity Status Toast */}
+      <OfflineIndicator />
     </div>
   );
 }
